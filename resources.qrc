@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/imgs">
+        <file>small-glow.png</file>
+        <file>big-glow.png</file>
+    </qresource>
+</RCC>

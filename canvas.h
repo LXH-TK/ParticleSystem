@@ -5,8 +5,11 @@
 #include <QPainter>
 #include <QMouseEvent>
 #include <vector>
+#include <QTimer>
 #include "particle.h"
+#include "explosion.h"
 
+using namespace std;
 
 class Canvas : public QWidget {
 
@@ -16,10 +19,10 @@ public:
     static void createParticle(float pos[],
                                float target,
                                float vel[],
-                               float color,
                                bool usePhysics);
 
 private:
+    QTimer *timer;
     static vector<Particle> mParticle;
 
 protected:

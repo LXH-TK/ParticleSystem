@@ -24,3 +24,6 @@ HEADERS  += widget.h \
     explosion.h
 
 FORMS    += widget.ui
+
+RESOURCES += \
+    resources.qrc

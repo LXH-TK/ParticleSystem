@@ -16,7 +16,7 @@ public:
     ~Widget();
 
 private slots:
-    void on_sendButton_clicked();
+    void on_resetButton_clicked();
 
 private:
     Ui::Widget *ui;
