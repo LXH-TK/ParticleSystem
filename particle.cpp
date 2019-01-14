@@ -2,7 +2,6 @@
 
 // 相对路径好像不行，只好用绝对路径了
 QImage Particle::smallGlow("/Users/lixinhao/Desktop/Particle_System/small-glow.png");
-QImage Particle::bigGlow("/Users/lixinhao/Desktop/Particle_System/big-glow.png");
 float Particle::gravity = 0.06;
 float Particle::easing = 0.02;
 QColor Particle::color = QColor(1, 160, 250);
@@ -57,9 +56,9 @@ bool Particle::update() {
     }
     else {
         float dis = this->target - this->pos[1];
-        // ease the position
+        // 速度渐变
         this->pos[1] += dis * (0.03 + easing);
-        // cap to 1
+        // alpha更新
         this->alpha = min(dis*dis*0.00005, (double)1);
     }
 

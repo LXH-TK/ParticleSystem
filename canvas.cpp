@@ -61,6 +61,7 @@ void Canvas::paintEvent(QPaintEvent *) {
         path.setFillRule(Qt::OddEvenFill);
         path.closeSubpath();    // 添加一条直线(当前到起始位置)关闭当前路径
 
+        // 抗锯齿
         painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform | QPainter::Qt4CompatiblePainting);
         painter.setPen(Particle::color);
         painter.setBrush(Particle::color);
